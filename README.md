@@ -1,14 +1,16 @@
-# Proyecto Increíble en Laravel
+# Proyecto Prueba en Laravel
 
-¡Bienvenido al Proyecto Increíble en Laravel! Este proyecto demuestra las características y funcionalidades destacadas de Laravel mediante vistas interactivas y proporciona instrucciones claras para su instalación.
+¡Grupo Ruiz, Bienvenido al Proyecto prueba en Laravel! Este proyecto demuestra las características y funcionalidades destacadas de Laravel mediante vistas interactivas y proporciona instrucciones claras para su instalación, en el cual se quiso plasmar los requirimentos inciales.
+
+Espero que os guste, cualquier duda estoy para servirles, Saludos.
 
 ## Vista General
 
 En este proyecto, hemos creado una serie de vistas interactivas para mostrarte las características clave de Laravel:
 
-- **Vista de Usuarios**: Explora cómo Laravel maneja la autenticación y la gestión de usuarios.
-- **Vista de Publicaciones**: Aprende sobre el enrutamiento y la manipulación de bases de datos con las publicaciones del proyecto.
-- **Vista de API**: Descubre cómo Laravel simplifica la creación de una API con ejemplos prácticos.
+- **Login**: Explora cómo Laravel maneja la autenticación y la gestión de usuarios.
+- **Home**: Tan solo una vista para apreciar las diferencias de una vista y otra y haciendo uso de un panel admin.
+- **Products**: Una vista creada para la muestra de un listado de productos que se pueden modificar y eliminar.
 
 ## Instalación
 
@@ -16,48 +18,40 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tuusuario/proyecto-laravel.git
-   cd proyecto-laravel
-Instala las dependencias:
+   git clone https://github.com/TheJC18/grupo_ruiz.git
+   cd grupo_ruiz
 
-bash
-Copy code
-composer install
-Configura el archivo de entorno:
+2. **Instalar dependecias composer**:
+   ```bash
+    composer install
+    Configura el archivo de entorno:
 
-Renombra el archivo .env.example a .env y configura la base de datos y otros valores necesarios.
-Genera la clave de aplicación:
+    Renombra el archivo .env.example a .env y configura la base de datos y otros valores necesarios.
+    *Recuerda crear una base de datos.*
 
-bash
-Copy code
-php artisan key:generate
-Ejecuta las migraciones y los seeders:
+3. **Instalar dependecias npm**:
+   ```bash
+    npm install
 
-bash
-Copy code
-php artisan migrate --seed
-Inicia el servidor de desarrollo:
+4. **Creacion de BD**:
+   ```bash
+    php artisan migrate --seed
 
-bash
-Copy code
-php artisan serve
-¡Accede a tu proyecto en el navegador! Visita: http://localhost:8000
+    Con esto crearemos los campos de nuestra base de datos previamente creada y ejecutara los seeders para tener los datos generedos por el proyecto.
 
-Contribución
-Si deseas contribuir a este proyecto, ¡estamos encantados de recibir tus contribuciones! Sigue estos pasos:
 
-Haz un fork del repositorio y clónalo en tu máquina.
-Crea una rama para tu función/corrección: git checkout -b nueva-funcion.
-Realiza tus cambios y realiza commits descriptivos.
-Sube tus cambios a tu repositorio: git push origin nueva-funcion.
-Abre una solicitud pull en este repositorio.
+5. **Desplegar**:
+   ```bash
+    Necesitamos 2 consolas:
+        1 Consola- Ejecutamos el comando php artisan serve 
+        2 Consola- Ejecutamos el comando npm install && npm run dev (Prefeiblemente una consola git bash en vscode)
+    
+    Luego de esto se puede usar usar el la direccion: http://127.0.0.1:8000 para acceder a nuestro proyecto.
+
 Soporte
 Si necesitas ayuda con este proyecto, no dudes en crear un problema en el repositorio o contactarnos por correo electrónico.
 
 Licencia
-Este proyecto está bajo la Licencia XYZ. Consulta el archivo LICENSE para obtener más información.
+Este proyecto está bajo la Licencia Jolber Chirinos. Consulta el archivo LICENSE para obtener más información.
 
-css
-Copy code
-
-Recuerda personalizar los nombres de los archivos, los enlaces, las rutas y la informació
+Recuerda personalizar los nombres de los archivos, los enlaces, las rutas y la información
