@@ -22,6 +22,8 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
 2. **Instalar dependecias composer**:
    ```bash
     composer install
+    php artisan key:generate
+
     Configure el archivo de entorno:
 
     Renombre el archivo .env.example a .env y configure la base de datos y otros valores necesarios.
