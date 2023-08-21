@@ -5,43 +5,75 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 class ProductController extends Controller
 {
-    public function index(Request $request)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
-        $perPage = $request->input('perPage', 10);
-        $products = Product::paginate($perPage); 
-        
-        return view('products.index', compact('products'));
+        return Product::all();
     }
 
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
-
-    }
-
-    public function show($id)
-    {
-    }
-
-    public function update(ProductRequest $request, $id)
-    {
-        $product = Product::findOrFail($id);
-
-        $validatedData = $request->validated();
-
-        $product->update([
-            'name' => $validatedData['name'],
-            'description' => $validatedData['description'],
-            'stock' => $validatedData['stock'],
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'stock' => 'required'
         ]);
-
-        return redirect()->route('products.index')->with('success', 'Producto actualizado correctamente.');
+    
+        return Product::create($request->all());
     }
 
-    public function destroy($id)
+    /**
+     * Display the specified resource.
+     */
+    public function show(Product $product)
     {
-        $product = Product::findOrFail($id);
-        $product->delete();
+        return $product;
+    }
 
-        return redirect()->route('products.index')->with('success', 'Producto eliminado correctamente.');
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Product $product)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Product $product)
+    {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'stock' => 'required'
+        ]);
+    
+        $product->update($request->all());
+    
+        return $product;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        
+        return response()->json(['message' => 'Product deleted successfully']);
     }
 }

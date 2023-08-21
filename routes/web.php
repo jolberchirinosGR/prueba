@@ -19,11 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::resource('products', ProductController::class);
-Route::resource('users', UserController::class);
-
-
+Route::get('{any}', function () {
+    return view('welcome');
+});
