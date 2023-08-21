@@ -24,16 +24,16 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
     composer install
     php artisan key:generate
 
-    Configure el archivo de entorno:
-
+3. **Configure el archivo de entorno**:
+   ```bash
     Renombre el archivo .env.example a .env y configure la base de datos y otros valores necesarios.
-    *Recuerde crear una base de datos.*
+   *Recuerde crear una base de datos.*
 
-3. **Instalar dependecias npm**:
+4. **Instalar dependecias npm**:
    ```bash
     npm install
 
-4. **Creacion de BD**:
+5. **Creacion de BD**:
    ```bash
     php artisan migrate --seed
 
