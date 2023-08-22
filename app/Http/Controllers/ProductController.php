@@ -10,7 +10,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return Product::all();
+        return Product::orderBy('updated_at', 'desc')
+        ->orderBy('created_at', 'desc')
+        ->get();    
     }
 
     /**
