@@ -4,8 +4,8 @@
         <h6>{{ product.name }}</h6>
         <h5 id="associating-form-text-with-form-controls">Description:</h5>
         <p>{{ product.description }}</p>
-        <h5 id="associating-form-text-with-form-controls">Price:</h5>
-        <p>Price: {{ product.price }}</p>
+        <h5 id="associating-form-text-with-form-controls">stock:</h5>
+        <p>stock: {{ product.stock }}</p>
         <router-link :to="`/products/${product.id}/edit`" class="btn btn-primary">Edit</router-link>
     </div>
 </template>
